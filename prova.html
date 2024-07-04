@@ -1,0 +1,70 @@
+<html>
+<body>
+    
+<div class="menu">
+    
+<img src="logo.png" alt="" width="270px">
+</div>
+<div class="container">
+<div id="titulo">
+<h3>To Do <br> List <br> </h3>
+<button> <a href="#data"> Data: </a></button>
+<button id="bt1"> <a href="#texto">Crie a sua aqui</a></button>
+</div>
+<h3> Quinta-feira </h3>
+</div>
+<div class="parte-lista">
+<div class="container2">
+
+<h1 class="subtitulo"> Adicionar Elementos na Lista</h1>
+<input type="text" class=”nome” placeholder="Seu nome">
+<input type="text" placeholder="Digite uma tarefa">
+<input type="text" class=”nome” placeholder="Digite seu sobrenome">
+<h3> Data: </h3>
+<button onclick="adicionar()"> + </button>
+<button onclick="remover()"> - </button>
+</div>
+<div id="tarefas">
+</div>
+</div>
+
+<script> 
+
+const h3 = document.getElementsByTagName("h3")[2];
+h3.style.fontSize = "40px";
+h3.style.fontFamily = "Arial";
+ 
+// const tarefa = document.getElementByTagName("input")[1];
+// const container2 = document.getElementByClassName ("container2")[0];
+// container2.innerHTML = tarefa.value;
+// document.getElementByClassName ("container2")[0].innerHTML = document.getElementByTagName("input")[1].value;
+const h1 = document.getElementByClassName("subtítulo")[0];
+h1.innerHTML = "adicionar tarefas na lista";
+document.getElementsByTagName("h3")[1].innerHTML = "teste";
+document.getElementsByClassName("container2")[0].innerHTML = document.getElementsByTagName("input")[1].value;
+
+const para = document.createElement("p");
+para.innerHTML = "Marcella";
+document.getElementsByClassName("container")[0].appendChild(para);
+
+const botao = document.createElement("button");
+botao.innerHTML="cancelar";
+const divnova = document.createElement("div");
+divnova.appendChild(botao);
+document.getElementById("tarefas").appendChild(divnova);
+
+const btremover = document.getElementsByTagName("button")[3];
+brtemover.addEventListener("click", function(){
+    document.getElementById("tarefas").remove();
+});
+
+const imagem = document.createElement("img");
+imagem.src = "pen.jpg";
+document.body.appendChild(imagem);
+
+document.getElementsByTagName("input")[0].value = 
+document.getElementsByTagName("input")[2].value; 
+  </script> 
+
+</body>
+</html>
